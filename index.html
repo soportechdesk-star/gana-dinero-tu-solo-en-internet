@@ -1,0 +1,493 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aprende a Ganar Dinero por Internet</title>
+
+    <meta
+        name="description"
+        content="Cursos y recursos gratuitos para aprender a generar ingresos utilizando Internet, inteligencia artificial y dropshipping."
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080b12;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 80px 20px 70px;
+            text-align: center;
+            background:
+                radial-gradient(circle at top, rgba(79, 70, 229, 0.35), transparent 45%),
+                linear-gradient(180deg, #111827 0%, #080b12 100%);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.06);
+            color: #a5b4fc;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        h1 {
+            max-width: 900px;
+            margin: auto;
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+
+        .highlight {
+            color: #818cf8;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 25px auto 0;
+            color: #aab2c3;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* CONTENT */
+
+        .container {
+            width: min(1150px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 70px 0 100px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #8e98ab;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        /* CARD */
+
+        .card {
+            overflow: hidden;
+            background: #111827;
+            border: 1px solid #202938;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #4f46e5;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .card-content {
+            padding: 28px;
+        }
+
+        .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            background: #4f46e5;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            line-height: 1.3;
+            margin-bottom: 14px;
+        }
+
+        .description {
+            color: #9ca6b7;
+            line-height: 1.65;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 22px;
+            padding: 14px 16px;
+            background: #0b101a;
+            border-radius: 12px;
+        }
+
+        .size-label {
+            color: #8e98ab;
+            font-size: 13px;
+        }
+
+        .size {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 12px;
+            background: #4f46e5;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .download:hover {
+            background: #6366f1;
+            transform: translateY(-2px);
+        }
+
+        .download svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        /* INFO */
+
+        .notice {
+            max-width: 850px;
+            margin: 55px auto 0;
+            padding: 22px 25px;
+            border: 1px solid #252e3d;
+            border-radius: 15px;
+            background: #0d131e;
+            color: #8993a5;
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #1c2431;
+            padding: 30px 20px;
+            text-align: center;
+            color: #667085;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .hero {
+                padding: 60px 20px 50px;
+            }
+
+            .videos {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding-top: 50px;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="badge">
+            🚀 RECURSOS PARA EMPRENDER ONLINE
+        </div>
+
+        <h1>
+            Aprende a ganar dinero
+            <span class="highlight">usando Internet</span>
+        </h1>
+
+        <p>
+            Accede a estos dos contenidos para aprender sobre inteligencia
+            artificial, negocios digitales y dropshipping.
+        </p>
+
+    </header>
+
+
+    <!-- VIDEOS -->
+
+    <main class="container">
+
+        <div class="section-title">
+
+            <h2>Contenido disponible</h2>
+
+            <p>
+                Mira los videos directamente desde Internet Archive o
+                descárgalos utilizando el botón correspondiente.
+            </p>
+
+        </div>
+
+
+        <section class="videos">
+
+
+            <!-- VIDEO 1 -->
+
+            <article class="card">
+
+                <div class="video-container">
+
+                    <iframe
+                        src="https://archive.org/embed/el-mejor-curso-gratis-de-inteligencia-artificial"
+                        allowfullscreen
+                        title="El Mejor Curso Gratis de Inteligencia Artificial">
+                    </iframe>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <div class="number">01</div>
+
+                    <h3>
+                        El Mejor Curso Gratis de Inteligencia Artificial
+                    </h3>
+
+                    <p class="description">
+                        Curso centrado en inteligencia artificial y sus
+                        posibilidades. Aprende herramientas y conceptos que
+                        pueden ayudarte a desarrollar nuevas habilidades
+                        para trabajar y crear proyectos en Internet.
+                    </p>
+
+
+                    <div class="info">
+
+                        <div>
+                            <div class="size-label">
+                                Tamaño del video
+                            </div>
+
+                            <div class="size">
+                                3.7 GB
+                            </div>
+                        </div>
+
+                        <div>
+                            🎥 MP4
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="download"
+                        href="https://archive.org/download/el-mejor-curso-gratis-de-inteligencia-artificial/El%20Mejor%20Curso%20Gratis%20De%20Inteligencia%20Artificial.mp4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M12 3v12"></path>
+                            <path d="m7 10 5 5 5-5"></path>
+                            <path d="M5 21h14"></path>
+                        </svg>
+
+                        Descargar video
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEO 2 -->
+
+            <article class="card">
+
+                <div class="video-container">
+
+                    <iframe
+                        src="https://archive.org/embed/guia-para-principiantes-de-dropshipping-en-2026-27-horas"
+                        allowfullscreen
+                        title="Guía Para Principiantes de Dropshipping en 2026">
+                    </iframe>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <div class="number">02</div>
+
+                    <h3>
+                        Guía para Principiantes de Dropshipping en 2026
+                    </h3>
+
+                    <p class="description">
+                        Guía de larga duración para conocer el modelo de
+                        negocio del dropshipping, desde los conceptos
+                        iniciales hasta diferentes estrategias relacionadas
+                        con el comercio electrónico.
+                    </p>
+
+
+                    <div class="info">
+
+                        <div>
+                            <div class="size-label">
+                                Tamaño del video
+                            </div>
+
+                            <div class="size">
+                                6.2 GB
+                            </div>
+                        </div>
+
+                        <div>
+                            🎥 MP4
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="download"
+                        href="https://archive.org/download/guia-para-principiantes-de-dropshipping-en-2026-27-horas/Gu%C3%ADa%20Para%20Principiantes%20De%20Dropshipping%20En%202026%20%28%2B27%20horas%29.mp4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M12 3v12"></path>
+                            <path d="m7 10 5 5 5-5"></path>
+                            <path d="M5 21h14"></path>
+                        </svg>
+
+                        Descargar video
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <div class="notice">
+
+            <strong>Nota:</strong>
+            Los videos se reproducen desde Internet Archive y los botones
+            de descarga dirigen a los archivos MPEG4 alojados allí.
+            El tamaño indicado corresponde al tamaño del elemento publicado
+            en Internet Archive.
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Contenido alojado en
+        <a
+            href="https://archive.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Internet Archive
+        </a>
+
+    </footer>
+
+
+</body>
+</html>
+```
